@@ -264,6 +264,8 @@ header a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
     margin-top: 30px;
     width: 370px;
     height: 404px;
@@ -271,7 +273,29 @@ header a:hover {
     background: #FFF;
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
-
+.slot_portfolio:hover .description{
+    top:0
+}
+.slot_portfolio:hover {
+    cursor: pointer;
+}
+.description {
+    position: absolute;
+    top:294px;
+    transition:.25s;
+    left:0;
+    width: 100%;
+    height: 294px;
+    background-color:rgba(33, 150, 243, 0.90);
+}
+.description p {
+    color: #FFF;
+    font-size: 18px;
+    font-family: Roboto;
+    line-height: 28px;
+    letter-spacing: 0.54px;
+    margin:49px 45px 49px 24px;
+    }
 .icon_box {
     width: 100%;
     height:120px;
@@ -460,10 +484,14 @@ footer a {
 }
 
 .title_box {
-    width: 322px;
-    height: 70px;
+    width: 100%;
+    height: 110px;
     display: flex;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+    padding:24px 20px;
+    z-index: 10;
+    
 }
 
 .title_box h3 {
